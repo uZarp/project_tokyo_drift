@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(../img/car1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 900px;
+}
+
+#navbar ul {
+  list-style: none; 
+  display: flex; 
+  justify-content: center;
+  background-color: transparent;
+}
+
+nav ul li {
+  margin: 10px 20px;
+}
+
+a{
+  text-decoration: none;
+  color: #fdfdfd;
+  font-family: "SUSE", sans-serif;
+}
+
+.container{
+  height: 740px;
+}
+
+#content-inner{
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title{
+  color: #fdfdfd;
+  font-size: 60px;
+  text-align: center;
+  font-family: "SUSE", sans-serif;
+}
+
+#second-title{
+  padding-top: 10px;
+  color: #fdfdfd;
+  font-size: 40px;
+  text-align: center;
+  font-family: "SUSE", sans-serif;
+}
+
+span{
+  display: inline-block;
+  padding: 50px 5px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+#cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12rem;
+}
+
+#card-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#card-infos p {
+  margin-top: 10px; 
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  color: white; 
+}
+
+#card-infos img {
+  display: flex;
+  justify-content: center;
+  max-width: 70%;
+  transition: 1.0s;
+}
+
+#card-infos img:hover{
+  transform: scale(1.2);
+  transition: transform 1.0s ease;
+  cursor: pointer;
+}
+
+#card-infos p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fdfdfd;
+}
+
+footer{
+  margin-top: 6rem;
+  background-color: transparent;
+  height: 100px;
+}
+
+footer p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 18px;
+  font-family: "SUSE", sans-serif;
+}
+
+
+/* SCROLL */
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px;  /* Largura da barra de rolagem */
+}
+
+/* Estiliza o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Cor de fundo da track (trilho) */
+  border-radius: 10px;  /* Deixa as bordas arredondadas */
+}
+
+/* Estiliza o polegar (thumb) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #888;  /* Cor do polegar */
+  border-radius: 10px;  /* Borda arredondada */
+}
+
+/* Estiliza o polegar quando o usuário passa o mouse sobre ele */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;  /* Cor do polegar ao passar o mouse */
+}

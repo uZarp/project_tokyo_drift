@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/scripts.js" defer></script>
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/323/323308.png" type="image/x-icon">
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-  <title>Tokyo Drift - </title>
+  <title>Tokyo Drift</title>
 </head>
-
 <body>
   <header>
     <nav id="navbar">
@@ -24,29 +21,38 @@
       </ul>
     </nav>
   </header>
+  
   <main class="container">
     <div id="content-inner">
       <h1 id="title">TOK<span>YO DR</span>IFT</h1>
       <h3 id="second-title">東京ドリフト</h3>
     </div>
+    
     <div id="cards">
-        <div id="card-infos">
-          <img src="img/mazda.png">
-          <p>Mazda RX7</p>
-        </div>
-        <div id="card-infos">
-          <img src="img/skyline.png">
-          <p>Skyline GT-R</p>
-        </div>
-        <div id="card-infos">
-          <img src="img/supra.png">
-          <p>Supra MK4</p>
-        </div>
+      <div class="card-infos" data-car="Mazda RX7">
+        <img src="img/mazda.png" alt="Mazda RX7">
+        <p>Mazda RX7</p>
+      </div>
+      <div class="card-infos" data-car="Skyline GT-R">
+        <img src="img/skyline.png" alt="Skyline GT-R">
+        <p>Skyline GT-R</p>
+      </div>
+      <div class="card-infos" data-car="Supra MK4">
+        <img src="img/supra.png" alt="Supra MK4">
+        <p>Supra MK4</p>
+      </div>
+    </div>
+    
+    <!-- Card de Detalhes -->
+    <div id="detail-card">
+      <button id="close-btn">X</button>
+      <h2 id="car-title"></h2>
+      <p id="car-description"></p>
     </div>
   </main>
+  
   <footer>
     <p>Copyright by Diogo Zarpelon®</p>
   </footer>
 </body>
-
 </html>

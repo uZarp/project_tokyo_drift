@@ -1,19 +1,19 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   background-image: url(../img/car1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 900px;
+  height: auto;
 }
 
 #navbar ul {
-  list-style: none; 
-  display: flex; 
+  list-style: none;
+  display: flex;
   justify-content: center;
   background-color: transparent;
 }
@@ -22,31 +22,32 @@ nav ul li {
   margin: 10px 20px;
 }
 
-a{
+a {
   text-decoration: none;
   color: #fdfdfd;
   font-family: "SUSE", sans-serif;
 }
 
-.container{
+.container {
   height: 740px;
+  position: relative;
 }
 
-#content-inner{
-  padding-top: 90px;
+#content-inner {
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#title{
+#title {
   color: #fdfdfd;
   font-size: 60px;
   text-align: center;
   font-family: "SUSE", sans-serif;
 }
 
-#second-title{
+#second-title {
   padding-top: 10px;
   color: #fdfdfd;
   font-size: 40px;
@@ -54,7 +55,7 @@ a{
   font-family: "SUSE", sans-serif;
 }
 
-span{
+span {
   display: inline-block;
   padding: 50px 5px;
   border-radius: 50%;
@@ -68,80 +69,148 @@ span{
   margin-top: 12rem;
 }
 
-#card-infos {
+.card-infos {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-#card-infos p {
-  margin-top: 10px; 
+.card-infos p {
+  margin-top: 10px;
   font-family: "SUSE", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
   font-weight: bold;
-  color: white; 
+  color: white;
 }
 
-#card-infos img {
+.card-infos img {
   display: flex;
   justify-content: center;
   max-width: 70%;
   transition: 1.0s;
 }
 
-#card-infos img:hover{
+.card-infos img:hover {
   transform: scale(1.2);
   transition: transform 1.0s ease;
   cursor: pointer;
 }
 
-#card-infos p{
+.card-infos p {
   text-align: center;
   font-weight: bold;
   font-size: 30px;
   color: #fdfdfd;
 }
 
-footer{
+footer {
   margin-top: 6rem;
   background-color: transparent;
-  height: 100px;
 }
 
-footer p{
+footer p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
   text-align: center;
   color: #fdfdfd;
   font-size: 18px;
   font-family: "SUSE", sans-serif;
 }
 
+/* Estilos do Card de Detalhes */
+#detail-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+}
+
+#detail-card.left {
+  left: 20%;
+}
+
+#detail-card.center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#detail-card.right {
+  left: 95%;
+  transform: translate(-100%, -50%);
+}
+
+
+#detail-card h2 {
+  font-family: "SUSE", sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#detail-card p {
+  font-family: "SUSE", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Modificar o botão de fechar para ser apenas um "X" */
+#close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  font-family: "SUSE", sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Imagens com o estado ativo */
+.card-infos img.active {
+  transform: scale(1.2);
+}
+
+/* Transição para suavidade ao fechar */
+.card-infos img {
+  transition: transform 0.5s ease;
+}
+
+/* Efeito de blur no fundo */
+body.blurred #content-inner,
+body.blurred #cards,
+body.blurred footer,
+body.blurred nav{
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
 
 /* SCROLL */
-
-/* Estiliza a barra de rolagem */
 ::-webkit-scrollbar {
-  width: 8px;  /* Largura da barra de rolagem */
+  width: 8px;
 }
 
-/* Estiliza o fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;  /* Cor de fundo da track (trilho) */
-  border-radius: 10px;  /* Deixa as bordas arredondadas */
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-/* Estiliza o polegar (thumb) da barra de rolagem */
 ::-webkit-scrollbar-thumb {
-  background: #888;  /* Cor do polegar */
-  border-radius: 10px;  /* Borda arredondada */
+  background: #888;
+  border-radius: 10px;
 }
 
-/* Estiliza o polegar quando o usuário passa o mouse sobre ele */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;  /* Cor do polegar ao passar o mouse */
+  background: #555;
 }

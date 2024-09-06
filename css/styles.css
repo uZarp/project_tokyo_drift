@@ -11,6 +11,10 @@ body {
   height: auto;
 }
 
+body.no-scroll{
+  overflow: hidden;
+}
+
 #navbar ul {
   list-style: none;
   display: flex;
@@ -29,7 +33,7 @@ a {
 }
 
 .container {
-  height: 740px;
+  height: 800px;
   position: relative;
 }
 
@@ -104,7 +108,7 @@ span {
 }
 
 footer {
-  margin-top: 6rem;
+  height: 200px;
   background-color: transparent;
 }
 
@@ -160,6 +164,11 @@ footer p {
   font-family: "SUSE", sans-serif;
   font-size: 20px;
   text-align: justify;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center; /* Centraliza o botão horizontalmente */
 }
 
 .btn-link {

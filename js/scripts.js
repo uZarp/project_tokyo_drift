@@ -17,12 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (carData) {
         carTitle.innerHTML = carData.titulo;
         carDescription.innerHTML = carData.descricao;
-        carDescription.innerHTML += `<br><br><a href="${carData.link}" class="btn-link">Saiba mais</a>`;
+        carDescription.innerHTML += `<br><br><div class="btn-container"><a href="${carData.link}"class="btn-link">Saiba mais</a></div>`;
       } else {
         carTitle.innerHTML = carName;
         carDescription.innerHTML = "No description available.";
       }
-      
       
       // Adiciona a classe 'active' ao card clicado
       e.target.classList.add('active');
@@ -45,14 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Exibe o card de detalhes e aplica o efeito de blur no fundo
       detailCard.style.display = 'block';
-      document.body.classList.add('blurred');
+      document.body.classList.add('blurred', 'no-scroll');
     });
   });
-
+  
   closeButton.addEventListener('click', () => {
     // Esconde o card de detalhes e remove o efeito de blur
     detailCard.style.display = 'none';
-    document.body.classList.remove('blurred');
+    document.body.classList.remove('blurred', 'no-scroll');
 
     // Remove a classe 'active' de todos os cards
     carCards.forEach(card => {

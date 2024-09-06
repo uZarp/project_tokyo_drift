@@ -92,7 +92,7 @@ span {
 
 .card-infos img:hover {
   transform: scale(1.2);
-  transition: transform 1.0s ease;
+  transition: transform 1.5s ease;
   cursor: pointer;
 }
 
@@ -158,9 +158,25 @@ footer p {
 
 #detail-card p {
   font-family: "SUSE", sans-serif;
-  font-size: 18px;
-  text-align: center;
+  font-size: 20px;
+  text-align: justify;
 }
+
+.btn-link {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #0056b3;
+}
+
 
 /* Modificar o botão de fechar para ser apenas um "X" */
 #close-btn {
@@ -181,9 +197,10 @@ footer p {
   transform: scale(1.2);
 }
 
+
 /* Transição para suavidade ao fechar */
 .card-infos img {
-  transition: transform 0.5s ease;
+  transition: transform 1.5s ease;
 }
 
 /* Efeito de blur no fundo */

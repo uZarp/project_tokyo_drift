@@ -5,27 +5,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const carTitle = document.getElementById('car-title');
   const carDescription = document.getElementById('car-description');
 
+
   carCards.forEach(card => {
     card.addEventListener('click', (e) => {
       const carName = e.target.nextElementSibling.textContent;
-      carTitle.textContent = carName;
 
-      // Placeholder descriptions, you can replace with actual data
-      const carDescriptions = {
-        'Mazda RX7': 'The Mazda RX-7 is a sports car with a unique rotary engine and sleek design.',
-        'Skyline GT-R': 'The Nissan Skyline GT-R is a legendary car known for its performance and technology.',
-        'Supra MK4': 'The Toyota Supra MK4 is a classic sports car with a powerful engine and iconic design.'
-      };
+      // Encontrando o dado correspondente no array
+      const carData = dados.find(dado => dado.titulo === carName);
 
-      carDescription.textContent = carDescriptions[carName] || "No description available.";
-
-      // Manter o hover do tamanho final até abrir o card
+      // Se encontrar o dado, preenche o título e descrição
+      if (carData) {
+        carTitle.innerHTML = carData.titulo;
+        carDescription.innerHTML = carData.descricao;
+        carDescription.innerHTML += `<br><br><a href="${carData.link}" class="btn-link">Saiba mais</a>`;
+      } else {
+        carTitle.innerHTML = carName;
+        carDescription.innerHTML = "No description available.";
+      }
+      
+      
+      // Adiciona a classe 'active' ao card clicado
       e.target.classList.add('active');
 
-      // Remover classes anteriores
+      // Remove classes de posicionamento do detailCard
       detailCard.classList.remove('left', 'center', 'right');
 
-      // Adicionar a classe de posição apropriada
+      // Define a posição do detailCard
       switch (carName) {
         case 'Mazda RX7':
           detailCard.classList.add('left');
@@ -38,18 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
           break;
       }
 
-      // Mostrar o card e aplicar o efeito de blur
+      // Exibe o card de detalhes e aplica o efeito de blur no fundo
       detailCard.style.display = 'block';
       document.body.classList.add('blurred');
     });
   });
 
   closeButton.addEventListener('click', () => {
-    // Esconder o card e remover o efeito de blur
+    // Esconde o card de detalhes e remove o efeito de blur
     detailCard.style.display = 'none';
     document.body.classList.remove('blurred');
 
-    // Remover a classe 'active' de todas as imagens
+    // Remove a classe 'active' de todos os cards
     carCards.forEach(card => {
       card.classList.remove('active');
     });

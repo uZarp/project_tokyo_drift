@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         carTitle.innerHTML = carName;
         carDescription.innerHTML = "No description available.";
       }
-      
+
       // Adiciona a classe 'active' ao card clicado
       e.target.classList.add('active');
 

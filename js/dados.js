@@ -2,7 +2,7 @@ let dados = [
   {
     titulo: "Mazda RX7", 
     descricao: " -> Com seu motor rotativo único e design aerodinâmico, o Mazda RX7 é um carro esportivo lendário. Um ícone dos anos 80 e 90, o RX7 continua a encantar os entusiastas de carros com seu som característico e manobrabilidade precisa.<br> -> Uma obra de engenharia japonesa que desafia as convenções. Se você busca um carro esportivo com um motor revolucionário e um design atemporal, o Mazda RX7 é a máquina perfeita para você.", 
-    link: "mazda.html"
+    link: ""
   }, 
   {
     titulo: "Skyline GT-R", 
